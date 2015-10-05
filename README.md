@@ -3,7 +3,7 @@
 A windows utility developed with [Coursera Downloader](https://github.com/coursera-dl/coursera-dl) Python Scripts.
 
 # Download
-You can get the lastest release from here. https://github.com/nishad/coursera-dl-windows/releases/latest Download coursera-dl-win-X.X.X.zip 
+You can get the latest release from here. https://github.com/nishad/coursera-dl-windows/releases/latest   Download `coursera-dl-win-X.X.X.zip` 
 
 # Usage
 ```
@@ -143,8 +143,7 @@ your disk.
 
 **NOTE**: If your password contains punctuation, quotes or other "funny
 characters" (e.g., `<`, `>`, `#`, `&`, `|` and so on), then you may have to
-escape them from your shell. With bash or other Bourne-shell clones (and
-probably with many other shells) one of the better ways to do so is to
+escape them. One of the better ways to do so is to
 enclose your password in single quotes, so that you don't run into
 problems.  See [issue #213][issue213] for more information.
 
