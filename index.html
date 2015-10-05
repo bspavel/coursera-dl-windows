@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Coursera Downloader for Windows by nishad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Coursera Downloader for Windows</h1>
+      <h2 class="project-tagline">A windows utility for downloading Coursera.org videos and naming them.</h2>
+      <a href="https://github.com/nishad/coursera-dl-windows" class="btn">View on GitHub</a>
+      <a href="https://github.com/nishad/coursera-dl-windows/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nishad/coursera-dl-windows/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="coursera-downloader-for-windows" class="anchor" href="#coursera-downloader-for-windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coursera Downloader for Windows</h1>
+
+<p>A windows utility developed with <a href="https://github.com/coursera-dl/coursera-dl">Coursera Downloader</a> Python Scripts.</p>
+
+<h1>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h1>
+
+<p>You can get the lastest release from here. <a href="https://github.com/nishad/coursera-dl-windows/releases/latest%E2%80%A8Download">https://github.com/nishad/coursera-dl-windows/releases/latest Download</a> coursera-dl-win-X.X.X.zip </p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<pre><code>usage: coursera-dl.exe [-h] [-u USERNAME] [-p PASSWORD] [--on-demand] [-b]
+                       [--path PATH] [-sl SUBTITLE_LANGUAGE] [--about]
+                       [-f FILE_FORMATS] [--ignore-formats IGNORE_FORMATS]
+                       [-sf SECTION_FILTER] [-lf LECTURE_FILTER]
+                       [-rf RESOURCE_FILTER]
+                       [--video-resolution VIDEO_RESOLUTION] [--wget [WGET]]
+                       [--curl [CURL]] [--aria2 [ARIA2]] [--axel [AXEL]]
+                       [--resume] [-o] [--verbose-dirs] [--quiet] [-r]
+                       [--combined-section-lectures-nums]
+                       [--unrestricted-filenames] [-v] [-c COOKIES_FILE]
+                       [-n [NETRC]] [-k] [--clear-cache] [--hook HOOKS] [-pl]
+                       [--skip-download] [--debug] [-l LOCAL_PAGE]
+                       class_names [class_names ...]
+
+Download Coursera.org lecture material and resources.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --resume              resume incomplete downloads (default: False)
+  -o, --overwrite       whether existing files should be overwritten (default:
+                        False)
+  --verbose-dirs        include class name in section directory name
+  --quiet               omit as many messages as possible (only printing
+                        errors)
+  -r, --reverse         download sections in reverse order
+  --combined-section-lectures-nums
+                        include lecture and section name in final files
+  --unrestricted-filenames
+                        Do not limit filenames to be ASCII-only
+  -v, --version         Display the version of udemy-dl and exit
+
+Basic options:
+  class_names           name(s) of the class(es) (e.g. "ml-005")
+  -u USERNAME, --username USERNAME
+                        coursera username
+  -p PASSWORD, --password PASSWORD
+                        coursera password
+  --on-demand           [DEPRECATED] get on-demand videos. Do not use this
+                        option, it is deprecated. The script will try to
+                        detect course type automatically.
+  -b, --preview         get videos from preview pages. (Default: False)
+  --path PATH           path to where to save the file. (Default: current
+                        directory)
+  -sl SUBTITLE_LANGUAGE, --subtitle-language SUBTITLE_LANGUAGE
+                        Choose language to download subtitles. (Default: en)
+
+Selection of material to download:
+  --about               download "about" metadata. (Default: False)
+  -f FILE_FORMATS, --formats FILE_FORMATS
+                        file format extensions to be downloaded in quotes
+                        space separated, e.g. "mp4 pdf" (default: special
+                        value "all")
+  --ignore-formats IGNORE_FORMATS
+                        file format extensions of resources to ignore
+                        (default: None)
+  -sf SECTION_FILTER, --section_filter SECTION_FILTER
+                        only download sections which contain this regex
+                        (default: disabled)
+  -lf LECTURE_FILTER, --lecture_filter LECTURE_FILTER
+                        only download lectures which contain this regex
+                        (default: disabled)
+  -rf RESOURCE_FILTER, --resource_filter RESOURCE_FILTER
+                        only download resources which match this regex
+                        (default: disabled)
+  --video-resolution VIDEO_RESOLUTION
+                        video resolution to download (default: 540p); only
+                        valid for on-demand courses; only values allowed:
+                        360p, 540p, 720p
+
+External downloaders:
+  --wget [WGET]         use wget for downloading,optionally specify wget bin
+  --curl [CURL]         use curl for downloading, optionally specify curl bin
+  --aria2 [ARIA2]       use aria2 for downloading, optionally specify aria2
+                        bin
+  --axel [AXEL]         use axel for downloading, optionally specify axel bin
+
+Advanced authentication options:
+  -c COOKIES_FILE, --cookies_file COOKIES_FILE
+                        full path to the cookies.txt file
+  -n [NETRC], --netrc [NETRC]
+                        use netrc for reading passwords, uses default location
+                        if no path specified
+  -k, --keyring         use keyring provided by operating system to save and
+                        load credentials
+  --clear-cache         clear cached cookies
+
+Advanced miscellaneous options:
+  --hook HOOKS          hooks to run when finished
+  -pl, --playlist       generate M3U playlists for course weeks
+
+Debugging options:
+  --skip-download       for debugging: skip actual downloading of files
+  --debug               print lots of debug information
+  -l LOCAL_PAGE, --process_local_page LOCAL_PAGE
+                        uses or creates local cached version of syllabus page
+
+</code></pre>
+
+<h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p><a href="https://www.coursera.org">Coursera</a> is arguably the leader in <em>massive open online courses</em> (MOOC)
+with a selection of more than 300 classes from 62 different institutions <a href="http://techcrunch.com/2013/02/20/coursera-adds-29-schools-90-courses-and-4-new-languages-to-its-online-learning-platform">as of
+February 2013</a>. Generous contributions by educators and institutions are
+making excellent education available to many who could not afford it otherwise.
+There are even non-profits with "feet on the ground" in remote areas of the
+world who are helping spread the wealth.</p>
+
+<p>This utility makes it easier to batch download lecture resources (e.g., videos, ppt,
+etc) for Coursera classes.  Given one or more class names and account credentials,
+it obtains week and class names from the <em>lectures</em> page, and then downloads
+the related materials into appropriately named files and directories.</p>
+
+<p>Why is this helpful?  A utility like <a href="http://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe">wget</a> can work, but has the
+following limitations:</p>
+
+<ol>
+<li>Video names have numbers in them, but this does not correspond to
+the actual order.  Manually renaming them is a pain that is best left
+for computers.</li>
+<li>Using names from the syllabus page provides more informative names.</li>
+<li>Using <code>wget</code> in a for loop picks up extra videos which are not
+posted/linked, and these are sometimes duplicates.</li>
+</ol>
+
+<p>Browser extensions like <em>DownloadThemAll</em> is another possibility, but
+<code>coursera-dl</code> provides more features such as appropriately named files.</p>
+
+<p>This work was originally inspired in part by <a href="https://rg3.github.com/youtube-dl">youtube-dl</a> by which
+I've downloaded many other good videos such as those from Khan Academy.</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Support for both regular (i.e., time-based) courses as well as on-demand
+courses.</li>
+<li>Intentionally detailed names, so that it will display and sort properly
+on most interfaces (e.g., <a href="https://f-droid.org/repository/browse/?fdid=org.videolan.vlc">VLC</a> or MX Video on Android devices).</li>
+<li>Regex-based section (week) and lecture name filters to download only
+certain resources.</li>
+<li>File format extension filter to grab resource types you want.</li>
+<li>Login credentials accepted on command-line or from <code>.netrc</code> file.</li>
+<li>Core functionality tested on major new Windows editions.</li>
+</ul>
+
+<h1>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h1>
+
+<p><code>coursera-dl</code> is meant to be used only for your material that Coursera gives
+you access to download.</p>
+
+<p>We do not encourage any use that violates their <a href="https://www.coursera.org/about/terms">Terms Of Use</a>. A
+relevant excerpt:</p>
+
+<blockquote>
+<p>"[...] Coursera grants you a personal, non-exclusive, non-transferable
+license to access and use the Sites. You may download material from the
+Sites only for your own personal, non-commercial use. You may not
+otherwise copy, reproduce, retransmit, distribute, publish, commercially
+exploit or otherwise transfer any material, nor may you modify or create
+derivatives works of the material."</p>
+</blockquote>
+
+<p><em>Note:</em> You must already have (manually) agreed to the Honor of Code of the
+particular courses that you want to use with <code>coursera-dl</code>.</p>
+
+<h2>
+<a id="create-an-account-with-coursera" class="anchor" href="#create-an-account-with-coursera" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create an account with Coursera</h2>
+
+<p>If you don't already have one, create a <a href="https://www.coursera.org">Coursera</a> account and enroll in
+a class. See <a href="https://www.coursera.org/courses">https://www.coursera.org/courses</a> for the list of classes.</p>
+
+<h2>
+<a id="running-the-script" class="anchor" href="#running-the-script" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running the script</h2>
+
+<p>Run the exe to download the materials by providing your Coursera account
+credentials (e.g. email address and password or a <code>~/.netrc</code> file), the
+class names, as well as any additional parameters:</p>
+
+<pre><code>General:                     coursera-dl -u &lt;user&gt; -p &lt;pass&gt; modelthinking-004
+On-Demand course:            coursera-dl -u &lt;user&gt; -p &lt;pass&gt; --on-demand calculus1
+Multiple classes:            coursera-dl -u &lt;user&gt; -p &lt;pass&gt; saas historyofrock1-001 algo-2012-002
+Filter by section name:      coursera-dl -u &lt;user&gt; -p &lt;pass&gt; -sf "Chapter_Four" crypto-004
+Filter by lecture name:      coursera-dl -u &lt;user&gt; -p &lt;pass&gt; -lf "3.1_" ml-2012-002
+Download only ppt files:     coursera-dl -u &lt;user&gt; -p &lt;pass&gt; -f "ppt" qcomp-2012-001
+Use a ~/.netrc file:         coursera-dl -n -- matrix-001
+Get the preview classes:     coursera-dl -n -b ni-001
+Specify download path:       coursera-dl -n --path=C:\Coursera\Classes\ comnetworks-002
+Display help:                coursera-dl --help
+</code></pre>
+
+<p><strong>Note:</strong> Some of the options like <code>-sf</code> and <code>-f</code> may not work with on-demand courses.
+Downloading on-demand courses are mutually exclusive with regular courses.</p>
+
+<pre><code>Maintain a list of classes in a dir:
+  Initialize:              mkdir -p CURRENT/{class1,class2,..classN}
+  Update:                  coursera-dl -n --path CURRENT `\ls CURRENT`
+</code></pre>
+
+<p>Note that we <em>do</em> support the new On Demand classes. You have to use the
+option <code>--on-demand</code> for that purpose. You also have to download those
+classes <em>separately</em> for regular, time-based classes.</p>
+
+<p>Use of a <code>~/.netrc</code> file is a good alternative to
+specifying both your username (i.e., your email address) and password every
+time on the command line. To use it, simply add a line like the one below to
+a file named <code>.netrc</code> in your home directory (or the <a href="http://stackoverflow.com/a/6031266/962311">equivalent</a>, if you
+are using Windows) with contents like:</p>
+
+<pre><code>machine coursera-dl login &lt;user&gt; password &lt;pass&gt;
+</code></pre>
+
+<p>Create the file if it doesn't exist yet.  From then on, you can switch from
+using <code>-u</code> and <code>-p</code> to simply call <code>coursera-dl</code> with the option <code>-n</code>
+instead.  This is especially convenient, as typing usernames (email
+addresses) and passwords directly on the command line can get tiresome (even
+more if you happened to choose a "strong" password).</p>
+
+<h2>
+<a id="resuming-downloads" class="anchor" href="#resuming-downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resuming downloads</h2>
+
+<p>In default mode when you interrupt the download process by pressing
+<kbd>CTRL</kbd>+<kbd>C</kbd>, partially downloaded files will be deleted from your disk and
+you have to start the download process from the begining. If your
+download was interrupted by something other than KeyboardInterrupt
+(<kbd>CTRL</kbd>+<kbd>C</kbd>) like sudden system crash, partially downloaded files will
+remain on your disk and the next time you start the process again,
+these files will be discraded from download list!, therefore it's your
+job to delete them manually before next start. For this reason we
+added an option called <code>--resume</code> which continues your downloads from
+where they stopped:</p>
+
+<pre><code>coursera-dl -u &lt;user&gt; -p &lt;pass&gt; --resume sdn1-001
+</code></pre>
+
+<p>This option can also be used with external downloaders:</p>
+
+<pre><code>coursera-dl --wget -u &lt;user&gt; -p &lt;pass&gt; --resume sdn1-001
+</code></pre>
+
+<p><em>Note 1</em>: Some external downloaders use their own built-in resume feature
+which may not be compatible with others, so use them at your own risk.</p>
+
+<p><em>Note 2</em>: Remember that in resume mode, interrupted files <strong>WON'T</strong> be deleted from
+your disk.</p>
+
+<p><strong>NOTE</strong>: If your password contains punctuation, quotes or other "funny
+characters" (e.g., <code>&lt;</code>, <code>&gt;</code>, <code>#</code>, <code>&amp;</code>, <code>|</code> and so on), then you may have to
+escape them from your shell. With bash or other Bourne-shell clones (and
+probably with many other shells) one of the better ways to do so is to
+enclose your password in single quotes, so that you don't run into
+problems.  See <a href="https://github.com/coursera-dl/coursera-dl/issues/213">issue #213</a> for more information.</p>
+
+<h1>
+<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h1>
+
+<p>If you have problems when downloading class materials, please try to see if
+one of the following actions solve your problem:</p>
+
+<ul>
+<li><p>Make sure the class name you are using corresponds to the resource name
+used in the URL for that class:
+  <code>https://class.coursera.org/&lt;CLASS_NAME&gt;/class/index</code></p></li>
+<li><p>To download an On Demand course, use the <code>--on-demand</code> option of the
+program.</p></li>
+<li><p>Have you tried to clean the cached cookies/credentials with the
+<code>--clear-cache</code> option?</p></li>
+<li><p>Note that many courses (most, perhaps?) may remove the materials after a
+little while after the course is completed, while other courses may retain
+the materials up to a next session/offering of the same course (to avoid
+problems with academic dishonesty, apparently).
+<br><br>
+In short, it is not guaranteed that you will be able to download after the
+course is finished and this is, unfortunately, nothing that we can help
+you with.</p></li>
+<li><p>One can export a Netscape-style cookies file with a browser extension (<a href="https://chrome.google.com/webstore/detail/lopabhfecdfhgogdbojmaicoicjekelh">1</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/export-cookies">2</a>)
+and use it with the <code>-c</code> option. This comes in handy
+when the authentication via password is not working (the authentication
+process changes now and then).</p></li>
+<li><p>If results show 0 sections, you most likely have provided invalid
+credentials (username and/or password in the command line or in your
+<code>.netrc</code> file).</p></li>
+<li><p>For courses that have not started yet, but have had a previous iteration
+sometimes a preview is available, containing all the classes from the last
+course. These files can be downloaded by passing the <code>--preview</code>
+parameter.</p></li>
+<li>
+<p>If you get an error like <code>Could not find class: &lt;CLASS_NAME&gt;</code>, then:</p>
+
+<ul>
+<li>Verify that the name of the course is correct. Current class
+names in coursera are composed by a short course name e.g. <code>class</code> and
+the current version of the course (a number). For example, for a
+class named <code>class</code>, you would have to use <code>class-001</code>, <code>class-002</code>
+etc.</li>
+<li>Second, verify that you are enrolled in the course. You won't be
+able to access the course materials if you are not officially
+enrolled and agreed to the honor course <em>via the website</em>.</li>
+</ul>
+</li>
+<li>
+<p>If:</p>
+
+<ul>
+<li>You get an error when using <code>-n</code> to specify that you want to use a
+<code>.netrc</code> file and,</li>
+<li>You want the script to use your default netrc file and,</li>
+<li>
+<p>You get a message saying <code>coursera-dl: error: too few arguments</code>  </p>
+
+<p>Then you should specify <code>--</code> as an argument after <code>-n</code>, that is, <code>-n --</code>
+or change the order in which you pass the arguments to the script, so that
+the argument after <code>-n</code> begins with an hyphen (<code>-</code>).  Otherwise, Python's
+<code>argparse</code> module will think that what you are passing is the name of the
+netrc file that you want to use. See issue #162.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="filing-an-issuereporting-a-bug" class="anchor" href="#filing-an-issuereporting-a-bug" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filing an issue/Reporting a bug</h1>
+
+<p>When reporting bugs against <code>coursera-dl</code>, please don't forget to include
+enough information so that you can help us help you:</p>
+
+<ul>
+<li>Is the problem happening with the latest version of the exe?</li>
+<li>What operating system are you using?</li>
+<li>Which version of the script you are using? (Output of <code>coursera-dl.exe -v</code>)</li>
+<li>What is the course that you are trying to access?</li>
+<li>What is the precise command line that you are using (feel free to hide
+your username and password with asterisks, but leave all other
+information untouched).</li>
+<li>What are the precise messages that you get? Please, use the <code>--debug</code>
+option before posting the messages as a bug report. Please, copy and paste
+them.  Don't reword/paraphrase the messages.</li>
+</ul>
+
+<h1>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h1>
+
+<p>Please, post bugs and issues on <a href="https://github.com/nishad/coursera-dl-windows/issues">github</a>. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nishad/coursera-dl-windows">Coursera Downloader for Windows</a> is maintained by <a href="https://github.com/nishad">nishad</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
