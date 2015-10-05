@@ -66,24 +66,6 @@ relevant excerpt:
 > exploit or otherwise transfer any material, nor may you modify or create
 > derivatives works of the material."
 
-
-# Installation instructions
-
-`coursera-dl` requires Python 2 or Python 3 and a free Coursera account
-enrolled in the class of interest. (At present/May of 2015, we test
-automatically the execution of the program with Python versions 2.6, 2.7,
-Pypy, 3.2, 3.3, and 3.4).
-
-**Note:** We *strongly* recommend that you use a Python 3 interpreter (3.4
-or later).
-
-On any operating system, ensure that the Python executable location is added
-to your `PATH` environment variable and, once you have the dependencies
-installed (see next section), for a *basic* usage, you will need to invoke
-the script from the main directory of the project and prepend it with the
-word `python`.  You can also use more advanced features of the program by
-looking at the "Running the script" section of this document.
-
 *Note:* You must already have (manually) agreed to the Honor of Code of the
 particular courses that you want to use with `coursera-dl`.
 
