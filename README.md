@@ -3,7 +3,9 @@
 A windows utility developed with [Coursera Downloader](https://github.com/coursera-dl/coursera-dl) Python Scripts.
 
 # Download
-You can get the latest release from here. https://github.com/nishad/coursera-dl-windows/releases/latest   Download `coursera-dl-win-X.X.X.zip` 
+You can get the latest release from here.
+ https://github.com/nishad/coursera-dl-windows/releases/latest  
+ Download `coursera-dl-win-X.X.X.zip` 
 
 # Usage
 ```
