@@ -1,0 +1,95 @@
+usage: coursera-dl.exe [-h] [-u USERNAME] [-p PASSWORD] [--on-demand] [-b]
+                       [--path PATH] [-sl SUBTITLE_LANGUAGE] [--about]
+                       [-f FILE_FORMATS] [--ignore-formats IGNORE_FORMATS]
+                       [-sf SECTION_FILTER] [-lf LECTURE_FILTER]
+                       [-rf RESOURCE_FILTER]
+                       [--video-resolution VIDEO_RESOLUTION] [--wget [WGET]]
+                       [--curl [CURL]] [--aria2 [ARIA2]] [--axel [AXEL]]
+                       [--resume] [-o] [--verbose-dirs] [--quiet] [-r]
+                       [--combined-section-lectures-nums]
+                       [--unrestricted-filenames] [-v] [-c COOKIES_FILE]
+                       [-n [NETRC]] [-k] [--clear-cache] [--hook HOOKS] [-pl]
+                       [--skip-download] [--debug] [-l LOCAL_PAGE]
+                       class_names [class_names ...]
+
+Download Coursera.org lecture material and resources.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --resume              resume incomplete downloads (default: False)
+  -o, --overwrite       whether existing files should be overwritten (default:
+                        False)
+  --verbose-dirs        include class name in section directory name
+  --quiet               omit as many messages as possible (only printing
+                        errors)
+  -r, --reverse         download sections in reverse order
+  --combined-section-lectures-nums
+                        include lecture and section name in final files
+  --unrestricted-filenames
+                        Do not limit filenames to be ASCII-only
+  -v, --version         Display the version of udemy-dl and exit
+
+Basic options:
+  class_names           name(s) of the class(es) (e.g. "ml-005")
+  -u USERNAME, --username USERNAME
+                        coursera username
+  -p PASSWORD, --password PASSWORD
+                        coursera password
+  --on-demand           [DEPRECATED] get on-demand videos. Do not use this
+                        option, it is deprecated. The script will try to
+                        detect course type automatically.
+  -b, --preview         get videos from preview pages. (Default: False)
+  --path PATH           path to where to save the file. (Default: current
+                        directory)
+  -sl SUBTITLE_LANGUAGE, --subtitle-language SUBTITLE_LANGUAGE
+                        Choose language to download subtitles. (Default: en)
+
+Selection of material to download:
+  --about               download "about" metadata. (Default: False)
+  -f FILE_FORMATS, --formats FILE_FORMATS
+                        file format extensions to be downloaded in quotes
+                        space separated, e.g. "mp4 pdf" (default: special
+                        value "all")
+  --ignore-formats IGNORE_FORMATS
+                        file format extensions of resources to ignore
+                        (default: None)
+  -sf SECTION_FILTER, --section_filter SECTION_FILTER
+                        only download sections which contain this regex
+                        (default: disabled)
+  -lf LECTURE_FILTER, --lecture_filter LECTURE_FILTER
+                        only download lectures which contain this regex
+                        (default: disabled)
+  -rf RESOURCE_FILTER, --resource_filter RESOURCE_FILTER
+                        only download resources which match this regex
+                        (default: disabled)
+  --video-resolution VIDEO_RESOLUTION
+                        video resolution to download (default: 540p); only
+                        valid for on-demand courses; only values allowed:
+                        360p, 540p, 720p
+
+External downloaders:
+  --wget [WGET]         use wget for downloading,optionally specify wget bin
+  --curl [CURL]         use curl for downloading, optionally specify curl bin
+  --aria2 [ARIA2]       use aria2 for downloading, optionally specify aria2
+                        bin
+  --axel [AXEL]         use axel for downloading, optionally specify axel bin
+
+Advanced authentication options:
+  -c COOKIES_FILE, --cookies_file COOKIES_FILE
+                        full path to the cookies.txt file
+  -n [NETRC], --netrc [NETRC]
+                        use netrc for reading passwords, uses default location
+                        if no path specified
+  -k, --keyring         use keyring provided by operating system to save and
+                        load credentials
+  --clear-cache         clear cached cookies
+
+Advanced miscellaneous options:
+  --hook HOOKS          hooks to run when finished
+  -pl, --playlist       generate M3U playlists for course weeks
+
+Debugging options:
+  --skip-download       for debugging: skip actual downloading of files
+  --debug               print lots of debug information
+  -l LOCAL_PAGE, --process_local_page LOCAL_PAGE
+                        uses or creates local cached version of syllabus page
